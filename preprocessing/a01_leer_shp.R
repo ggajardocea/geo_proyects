@@ -1,4 +1,16 @@
 
 # Leer los archivos geográficos -------------------------------------------
+source("init.R")
+library("shiny")
+library("leaflet")
+library("sf")
 
 
+# Probar con las regiones -------------------------------------------------
+regiones <- read_sf(dsn = "data/input/maps/regiones/regiones.shp")
+
+
+# Hacer un ejemplo con leaflet --------------------------------------------
+leaflet() %>%
+        addProviderTiles("CartoDB") %>%
+        addPolygons(data = regiones,weight=2,col = 'black',fillOpacity = 0.2)

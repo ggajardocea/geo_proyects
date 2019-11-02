@@ -1,3 +1,9 @@
+
+# Cargar paquetes que siempre uso -----------------------------------------
+library("dplyr")
+library("stringr")
+library("data.table")
+
 # Opciones útiles ----------------------------------------------------------
 
 options("h2o.use.data.table" = TRUE)
@@ -38,5 +44,3 @@ if(version$os == "mingw32"){
 }
 
 # Source custom functions  ------------------------------------------------
-
-sourceDir("functions", printBool = F)
