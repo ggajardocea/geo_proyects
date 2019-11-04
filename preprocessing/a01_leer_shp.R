@@ -7,6 +7,7 @@ library("sf")
 
 
 # Probar con las regiones -------------------------------------------------
+# Se vuelven a guardar porque en la instancia no funcionan las lecturas de shp
 regiones <- read_sf(dsn = "data/input/maps/regiones/regiones.shp")
 saveRDS(regiones, "data/input/maps/regiones/regiones.rds")
 
